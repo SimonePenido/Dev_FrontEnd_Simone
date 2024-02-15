@@ -3,7 +3,7 @@
 :root {
   --header-height: 3rem;
 
-  --hue-color: 250;
+  --hue-color: 360;
 
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
@@ -312,7 +312,7 @@ img {
 }
 
 .home-scroll {
-  /* display: none; */
+  display: none; 
 }
 
 .home-scroll-button {
@@ -806,9 +806,14 @@ img {
   flex-direction: column;
   row-gap: 1.5rem;
 }
+
 .footer-link {
-  /* hii  */
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+
 }
+
 .footer-link:hover {
   color: var(--first-color-lighter);
 }
