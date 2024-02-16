@@ -415,7 +415,7 @@ img {
 .about-info-title {
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
-  color: #713abe;
+  color: #ff0000;
 }
 
 .about-info-name {
@@ -526,7 +526,7 @@ img {
 }
 
 .qualification-button.qualification-active {
-  color: #5b0888;
+  color: #ff0000;
 }
 
 /* services  */
