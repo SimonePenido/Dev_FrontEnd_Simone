@@ -14,7 +14,7 @@ if (navClose) {
   });
 }
 
-// remove menu mobile
+// remover menu mobile
 const navLink = document.querySelectorAll(".nav-link");
 
 function linkAction() {
@@ -45,7 +45,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// services box
+// serviços box
 const boxViews = document.querySelectorAll(".services-box"),
   boxBtns = document.querySelectorAll(".services-button"),
   boxCloses = document.querySelectorAll(".services-box-close");
@@ -68,7 +68,7 @@ boxCloses.forEach((boxClose) => {
   });
 });
 
-//scroll section active link
+// rolagem da seção ativa do link
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
@@ -92,42 +92,42 @@ function scrollActive() {
 }
 window.addEventListener("scroll", scrollActive);
 
-// change bg header
+// alterar bg header
 function scrollHeader() {
   const nav = document.getElementById("header");
-  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+  // Quando o scroll for maior que 200 viewport height, adicione a classe scroll-header à tag header
   if (this.scrollY >= 200) nav.classList.add("scroll-header");
   else nav.classList.remove("scroll-header");
 }
 window.addEventListener("scroll", scrollHeader);
 
-/*==================== SHOW SCROLL TOP ====================*/
+/*==================== MOSTRAR SCROLL TOP ====================*/
 function scrollUp() {
   const scrollUp = document.getElementById("scroll-up");
-  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+  // Quando o scroll for maior que 560 viewport height, adicione a classe show-scroll à tag a com a classe scroll-top
   if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
   else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
 
-//dark light mode------------------
+// modo escuro/claro------------------
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "fa-sun";
 
-// Previously selected topic (if user selected)
+// Tópico previamente selecionado (se o usuário selecionou)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
+// Obtemos o tema atual que a interface possui, validando a classe dark-theme
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "fa-moon" : "fa-sun";
 
-// We validate if the user previously chose a topic
+// Validamos se o usuário escolheu um tópico anteriormente
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  // Se a validação for cumprida, perguntamos qual foi o problema para saber se ativamos ou desativamos o modo escuro
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
@@ -136,17 +136,17 @@ if (selectedTheme) {
   );
 }
 
-// Activate / deactivate the theme manually with the button
+// Ativar/desativar o tema manualmente com o botão
 themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
+  // Adicionar ou remover o tema escuro/claro
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
+  // Salvamos o tema e o ícone atual que o usuário escolheu
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-//swiper
+// swiper
 let swiperPortfolio = new Swiper(".portfolio-container", {
   cssMode: true,
   loop: true,
