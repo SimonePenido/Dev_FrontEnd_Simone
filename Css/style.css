@@ -18,6 +18,8 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
+  --cor-destaque: #ff0000;
+
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -403,7 +405,7 @@ img {
 }
 
 .about-description {
-  text-align: center;
+  text-align: justify;
   margin-bottom: var(--margin-bottom-0-2-5);
 }
 
@@ -416,7 +418,7 @@ img {
 .about-info-title {
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
-  color: #ff0000;
+  color: var(--cor-destaque);
 }
 
 .about-info-name {
@@ -448,7 +450,7 @@ img {
   background: var(--first-color-lighter);
   border-radius: 5px;
   font-weight: 600;
-  color: #ff0000;
+  color: var(--cor-destaque);
   transition: 0.3s ease;
 }
 
@@ -528,7 +530,7 @@ img {
 }
 
 .qualification-button.qualification-active {
-  color: #ff0000;
+  color: var(--cor-destaque);
 }
 
 /* serviços  */
@@ -630,7 +632,7 @@ img {
   visibility: visible;
 }
 
-/* projects  */
+/* projetos  */
 .portfolio-container {
   overflow: initial;
 }
@@ -714,7 +716,7 @@ img {
   justify-self: center;
 }
 
-/* testimonial  */
+/* depoimentos  */
 .testimonial-data,
 .testimonial-header {
   display: flex;
@@ -753,7 +755,7 @@ img {
 .swiper-container .swiper-pagination-testimonial {
   bottom: 0;
 }
-/* contact section  */
+/* contato  */
 .contact-container {
   row-gap: 3rem;
 }
@@ -881,7 +883,7 @@ img {
 }
 
 /* media queries  */
-/* small devices */
+/* telas pequenas */
 @media screen and (max-width: 350px) {
   .container {
     margin-left: var(--margin-bottom-0-1);
@@ -946,7 +948,7 @@ img {
   }
 }
 
-/* medium devices */
+/* telas médias */
 @media screen and (min-width: 568px) {
   .home-content {
     grid-template-columns: max-content 1fr 1fr;
@@ -1144,7 +1146,7 @@ img {
   }
 }
 
-/* large devices */
+/* telas grandes */
 @media screen and (min-width: 1024px) {
   .heder,
   .main,
@@ -1160,6 +1162,10 @@ img {
     transform: translateX(-6rem);
   }
 
+  .about-description {
+    text-align: justify;
+  }
+  
   .services-container {
     grid-template-columns: repeat(3, 238px);
   }
