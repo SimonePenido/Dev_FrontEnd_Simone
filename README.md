@@ -24,7 +24,7 @@ Este repositório contém um projeto Front-End desenvolvido por **Simone Penido*
 
 - HTML5  
 - CSS3  
-- JavaScript (se houver, ajustar conforme o conteúdo real do projeto)
+- JavaScript 
 
 ---
 
